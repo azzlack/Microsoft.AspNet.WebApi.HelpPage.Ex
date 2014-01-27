@@ -437,11 +437,14 @@ namespace $rootnamespace$.Areas.HelpPage
             // Convert <para> to <p>
             i = i.Replace("<para>", "<p>").Replace("</para>", "</p>");
 
-            // Convert <c> to <pre>
-            i = i.Replace("<c>", "<pre>").Replace("</c>", "</pre>");
+            // Convert <c> to <code>
+            i = i.Replace("<c>", "<code>").Replace("</c>", "</code>");
 
-            // Convert <example> to <code>
-            i = i.Replace("<example>", "<code>").Replace("</example>", "</code>");
+            // Convert <code> to <pre>
+            i = i.Replace("<code>", "<pre>").Replace("</code>", "</pre>");
+
+            // Convert <example> to <samp>
+            i = i.Replace("<example>", "<samp>").Replace("</example>", "</samp>");
 
             // TODO: Support <exception cref=""/>
 
