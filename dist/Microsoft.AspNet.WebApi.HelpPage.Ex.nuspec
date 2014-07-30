@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.WebApi.HelpPage.Ex</id>
+    <version>1.0.0</version>
+    <title>Microsoft ASP.NET Web API Help Page Extensions</title>
+    <authors>Ove Andersen</authors>
+    <owners>EyeCatch</owners>
+    <projectUrl>http://www.eyecatch.no/projects/aspnet-webapi-help-page-extensions/</projectUrl>
+    <iconUrl>http://www.eyecatch.no/favicon.ico</iconUrl>
+    <licenseUrl>http://www.eyecatch.no/licenses/apache-20/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extensions for Microsoft ASP.NET Web API Help Pages
+
+Features:
+  * Show controllers and methods using Authorize attribute on documentation page
+
+Please note that this package is not affiliated with Microsoft in any way.</description>
+    <summary>Extensions for Microsoft ASP.NET Web API Help Pages.</summary>
+    <copyright>Copyright EyeCatch 2014</copyright>
+    <tags>aspnet webapi aspnetwebapi documentation helppage</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.HelpPage" version="[5.2.0, 5.3.0)" />
+    </dependencies>
+  </metadata>
+</package>
