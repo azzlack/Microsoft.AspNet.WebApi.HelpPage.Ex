@@ -5,6 +5,7 @@ namespace $rootnamespace$.Areas.HelpPage
 	using System.Globalization;
 	using System.Linq;
 	using System.Reflection;
+	using System.Text.RegularExpressions;
 	using System.Web.Http;
 	using System.Web.Http.Controllers;
 	using System.Web.Http.Description;
@@ -58,7 +59,7 @@ namespace $rootnamespace$.Areas.HelpPage
 			// Add message if controller requires authorization
 			if (Attribute.IsDefined(controllerDescriptor.ControllerType, typeof(AuthorizeAttribute)))
 			{
-				s.Add("<p><em>Requires authorization!</em></p>");
+				s.Add("<p><i class='fa fa-lock'></i> Requires authorization!</p>");
 			}
 
 			return string.Join("", s.Where(x => !string.IsNullOrEmpty(x)));
@@ -82,7 +83,7 @@ namespace $rootnamespace$.Areas.HelpPage
 			// Add message if controller requires authorization
 			if (actionDescriptor.GetCustomAttributes<AuthorizeAttribute>().Any())
 			{
-				s.Add("<p><em>Requires authorization!</em></p>");
+				s.Add("<p><i class='fa fa-lock'></i> Requires authorization!</p>");
 			}
 
 			return string.Join("", s.Where(x => !string.IsNullOrEmpty(x)));
@@ -174,7 +175,7 @@ namespace $rootnamespace$.Areas.HelpPage
 
 			var s = new[]
 						{
-							GetTagValue(typeNode, "summary"),
+							GetTagValue(methodNode, "summary"),
 							GetTagValue(methodNode, "returns")
 						};
 

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Microsoft.AspNet.WebApi.HelpPage.Ex</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title>Microsoft ASP.NET Web API Help Page Extensions</title>
     <authors>Ove Andersen</authors>
     <owners>EyeCatch</owners>
