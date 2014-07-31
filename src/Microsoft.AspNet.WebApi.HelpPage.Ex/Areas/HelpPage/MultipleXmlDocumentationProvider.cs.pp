@@ -11,7 +11,7 @@ namespace $rootnamespace$.Areas.HelpPage
 	using System.Web.Http.Description;
 	using System.Xml.XPath;
 
-	using Microsoft.AspNet.WebApi.HelpPage.Areas.HelpPage.ModelDescriptions;
+	using $rootnamespace$.Areas.HelpPage.ModelDescriptions;
 
 	/// <summary>
 	/// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
