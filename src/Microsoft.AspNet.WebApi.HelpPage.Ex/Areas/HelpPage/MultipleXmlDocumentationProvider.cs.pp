@@ -87,12 +87,12 @@ namespace $rootnamespace$.Areas.HelpPage
 			}
 
 			// Add message if action is marked as Obsolete
-            ObsoleteAttribute obsoleteAttribute = actionDescriptor.GetCustomAttributes<ObsoleteAttribute>().FirstOrDefault();
-            if (obsoleteAttribute != null)
-            {
-                s.Add(string.Format("<p><i class='fa fa-warning'></i> This action is Obsolete: {0}</p>",
-                    string.IsNullOrEmpty(obsoleteAttribute.Message) ? "<i>unknown reason</i>" : obsoleteAttribute.Message));
-            }
+			ObsoleteAttribute obsoleteAttribute = actionDescriptor.GetCustomAttributes<ObsoleteAttribute>().FirstOrDefault();
+			if (obsoleteAttribute != null)
+			{
+				s.Add(string.Format("<p><i class='fa fa-warning'></i> This action is Obsolete: {0}</p>",
+					string.IsNullOrEmpty(obsoleteAttribute.Message) ? "<i>unknown reason</i>" : obsoleteAttribute.Message));
+			}
 
 			return string.Join("", s.Where(x => !string.IsNullOrEmpty(x)));
 		}
